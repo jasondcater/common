@@ -1,0 +1,10 @@
+# Fong lab serversmb://fonglabsrv1.ucsf.edu/CIL 
+
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/deployment_guide/s1-samba-connect-share
+
+ Sometimes it is useful to mount a Samba share to a directory so that the files in the directory can be treated as if they are part of the local file system.
+To mount a Samba share to a directory, create create a directory to mount it to (if it does not already exist), and execute the following command as root:
+
+mount -t cifs -o <username>,<password> //<servername>/<sharename> /mnt/point/
+
+This command mounts <sharename> from <servername> in the local directory /mnt/point/. For more information about mounting a samba share, refer to man mount.cifs
